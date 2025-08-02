@@ -1,0 +1,146 @@
+.page{width: 99vw;height:300vh;border:1px;display: flex}
+nav ul li{display:inline-block;}
+#page1{background:rgb(46, 212, 201)}
+#page2{background:rgb(46, 212, 201)}
+#page3{background:rgb(46, 212, 201)}
+
+/*CSS for responsive menu*/
+#hamIcon{display:none;}
+@media screen and (max-width:800px)
+{
+/*make a menu items vertical*/
+nav ul li{display:block;}
+/*hide the menu item list*/
+nav ul{display:none;}
+}
+/*to unhide menu items*/
+.menuShow{display:block;}
+
+a{display: inline-block;}
+
+.header {
+  background-color: #1f34cd;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #7367ac;
+  color: white;
+}
+
+#page1 {
+  display : none;
+}
+#page2 {
+    display : none;
+}
+#page2 {
+    display : none;
+}
+
+div {
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+  display: flex;
+  margin: 0;
+  opacity: 0;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  animation: picAnimLeft 5s;
+  animation-fill-mode: forwards;
+}
+
+p2{
+  display: flex;
+  margin: 0;
+  opacity: 0;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  animation: picAnimRight 5s;
+  animation-fill-mode: forwards;
+}
+
+h{
+  font-size: 50px;
+}
+h1{
+  padding: 16px;
+  font-size: 30vw;
+  
+}
+h2 {
+  padding: 16px;
+  font-size: 20px;
+}
+
+qr{background:cyan;}
+@media (max-width:800px){ /*at mobile size*/
+#qrCodeImg{display:none;} /*hide QR code */
+h1{background: lightgreen;}
+h1::after{content:"(mobile)";}/*append text 'mobile’ */
+}
+
+body{
+  font-size: 10vw;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(46, 212, 201);
+}
+#p {animation-timing-function: ease;}
+#p2 {animation-timing-function: ease;}
+@keyframes picAnimLeft {
+    from{ opacity: 0;} to {opacity:1;}
+  from {left: 500px;}
+  to {left: 0px;}
+}
+@keyframes picAnimRight {
+    from{ opacity: 0;} to {opacity:1;}
+  from {left: 800px;}
+  to {left: 1200px;}
+}
+
+#teleId {position: relative;width:10vw;
+transition: all 0.5s;
+}
+#teleId2 {position: relative;width:10vw;
+transition: all 0.3s;
+}
+#teleId3 {position: relative;width:10vw;
+transition: all 0.2s;
+}
+#teleId.shrink{width:5vw;opacity: 0;}
+@keyframes teleFrames{
+0%{rotate:0deg}
+25%{rotate:90deg}
+50%{rotate:180deg}
+100%{rotate:270deg}
+}
+#teleId.anim1{ animation: teleFrames 1s; animation-iteration-count: infinite;}
